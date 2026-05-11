@@ -1,0 +1,182 @@
+/* Floating Button Animations */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+  }
+  50% {
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.6);
+  }
+  100% {
+    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Floating Button Styles */
+.ai-floating-button {
+  animation: pulse 3s infinite;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform;
+  transform-origin: bottom right;
+}
+
+.ai-floating-button:hover {
+  animation: none;
+  transform: scale(1.08) !important;
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.5);
+  transform-origin: bottom right;
+}
+
+/* Chat Dialog Animations */
+.chat-dialog {
+  animation: slideInUp 0.4s ease-out;
+}
+
+.message-item {
+  animation: fadeInScale 0.3s ease-out;
+}
+
+/* Trending Products Animation */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.trending-product {
+  animation: slideInRight 0.4s ease-out;
+  transition: transform 0.2s ease;
+}
+
+.trending-product:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Quick Action Chips Animation */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.quick-action-chip {
+  animation: fadeInUp 0.3s ease-out;
+  transition: all 0.2s ease;
+}
+
+.quick-action-chip:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);
+}
+
+/* Typing Indicator */
+@keyframes typing {
+  0%, 60%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+}
+
+.typing-indicator {
+  animation: typing 1.4s infinite ease-in-out;
+}
+
+/* Gradient Background */
+.gradient-bg {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Product Recommendation Cards */
+.product-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Notification Badge */
+@keyframes notification {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.notification-badge {
+  animation: notification 0.5s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ai-floating-button {
+    bottom: 16px !important;
+    right: 16px !important;
+    width: 56px !important;
+    height: 56px !important;
+  }
+  
+  .chat-dialog {
+    margin: 8px;
+    max-height: 90vh;
+  }
+}
