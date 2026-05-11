@@ -195,4 +195,4 @@ MIT — feel free to use, fork, or build on top of this.
 
 ---
 
-> Built as a hands-on Gen AI training project. Every feature was intentionally chosen to make it feel production-ready.
+> Built with a focus on making it feel production-ready. Every feature was intentionally chosen to solve a real problem.
