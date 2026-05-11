@@ -120,7 +120,7 @@ function Suppliers() {
         <TableContainer component={Paper} sx={{ borderRadius: 2 }}>
           <Table>
             <TableHead>
-              <TableRow sx={{ bgcolor: 'grey.50' }}>
+              <TableRow sx={{ bgcolor: 'action.hover' }}>
                 <TableCell sx={{ fontWeight: 600 }}>Name</TableCell>
                 <TableCell sx={{ fontWeight: 600 }}>Email</TableCell>
                 <TableCell sx={{ fontWeight: 600 }}>Phone</TableCell>
@@ -132,7 +132,7 @@ function Suppliers() {
             </TableHead>
             <TableBody>
               {suppliers.map((supplier) => (
-                <TableRow key={supplier._id} sx={{ '&:hover': { bgcolor: 'grey.50' } }}>
+                <TableRow key={supplier._id} sx={{ '&:hover': { bgcolor: 'action.hover' } }}>
                   <TableCell sx={{ fontWeight: 500 }}>{supplier.name}</TableCell>
                   <TableCell>{supplier.email}</TableCell>
                   <TableCell>{supplier.phone}</TableCell>

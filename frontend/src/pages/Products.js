@@ -163,7 +163,7 @@ function Products() {
         <TableContainer component={Paper} sx={{ borderRadius: 2 }}>
           <Table>
             <TableHead>
-              <TableRow sx={{ bgcolor: 'grey.50' }}>
+              <TableRow sx={{ bgcolor: 'action.hover' }}>
                 <TableCell sx={{ fontWeight: 600 }}>Product</TableCell>
                 <TableCell sx={{ fontWeight: 600 }}>SKU</TableCell>
                 <TableCell sx={{ fontWeight: 600 }}>Category</TableCell>
@@ -178,7 +178,7 @@ function Products() {
               {filteredProducts.map((product) => {
                 const status = getStockStatus(product);
                 return (
-                  <TableRow key={product._id} sx={{ '&:hover': { bgcolor: 'grey.50' } }}>
+                  <TableRow key={product._id} sx={{ '&:hover': { bgcolor: 'action.hover' } }}>
                     <TableCell><Typography variant="body1" sx={{ fontWeight: 500 }}>{product.name}</Typography></TableCell>
                     <TableCell><Typography variant="body2" color="text.secondary">{product.sku}</Typography></TableCell>
                     <TableCell><Chip label={product.category} size="small" variant="outlined" sx={{ borderRadius: 1 }} /></TableCell>
